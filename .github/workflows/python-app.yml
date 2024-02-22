@@ -39,5 +39,5 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run
       run: |
-        git update-index --chmod=+x ./.github/scripts/backend_decrypt.sh
+        git update-index --chmod=+x hello.py
         ./hello.py
