@@ -1,27 +1,16 @@
 def complex_function(x, y):
-    if x > 0:
-        if y > 0:
-            print("Quadrant I")
-        else:
-            print("Quadrant IV")
-    elif x < 0:
-        if y > 0:
-            print("Quadrant II")
-        else:
-            print("Quadrant III")
-    else:
-        print("Origin")
+    quadrant = ""
+    xy_state = ""
 
-    # Duplicated code
     if x > 0:
-        if y > 0:
-            print("X and Y are positive")
-        else:
-            print("X is positive but Y is not")
+        quadrant = "Quadrant I" if y > 0 else "Quadrant IV"
+        xy_state = "X and Y are positive" if y > 0 else "X is positive but Y is not"
     elif x < 0:
-        if y > 0:
-            print("X is negative but Y is positive")
-        else:
-            print("Both X and Y are negative")
+        quadrant = "Quadrant II" if y > 0 else "Quadrant III"
+        xy_state = "X is negative but Y is positive" if y > 0 else "Both X and Y are negative"
     else:
-        print("Both X and Y are zero")
+        quadrant = "Origin"
+        xy_state = "Both X and Y are zero"
+
+    print(quadrant)
+    print(xy_state)
